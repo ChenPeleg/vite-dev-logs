@@ -3,9 +3,15 @@
   "description": "Creates a Vite plugin that logs only in development mode, for AI agents.",
   "version": "0.1.0",
   "type": "module",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "src/**/*",
+    "dist/**/*",
+    "dist",
+    "*.d.ts"
+  ],
   "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -22,10 +28,7 @@
   },
   "homepage": "https://github.com/ChenPeleg/vite-dev-logs#readme",
   "bugs": "https://github.com/ChenPeleg/vite-dev-logs/issues",
-  "files": [
-    "dist",
-    "*.d.ts"
-  ],
+
   "keywords": [
     "vite",
     "vue",
