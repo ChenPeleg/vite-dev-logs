@@ -52,7 +52,7 @@ export default function viteDevLogger(
                     try {
                         const data = JSON.parse(body);
                         appendFileSync(
-                            `${pluginOptions.outputFolder}/${pluginOptions.outputFileName}${todayDate}.log`,
+                            `${pluginOptions.outputFolder}/${pluginOptions.outputFileName}-${todayDate}.log`,
                             JSON.stringify(data, null, 0) + '\n'
                         );
                         res.statusCode = 200;
