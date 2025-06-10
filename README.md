@@ -126,7 +126,7 @@ add a simple script to clear the logs before starting the AI Agent:
 ```json 
 {
   "scripts": {
-    "clear-logs":   "node -e \"require('fs').rmSync('logs', { recursive: true, force: true }); require('fs').mkdirSync('logs');\"",
+    "clear-logs":   "node -e \"require('fs').rmSync('logs', { recursive: true, force: true }); require('fs').mkdirSync('logs');\""
   }
 }
 ```
