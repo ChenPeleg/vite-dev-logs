@@ -12,6 +12,8 @@ The AI Agent can tell if there are build errors, but it cannot see browser error
 This plugin provides a simple way to create local logs during development.
 **Its soul purpose is to log browser errors to a local file, and make them available to the AI Agent.**
 
+> Note: This plugin is not meant for production use. It is designed for development purposes only. For production logging, consider using a more robust solution.
+
 
 ## Installation
 
