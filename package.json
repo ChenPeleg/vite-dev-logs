@@ -40,9 +40,7 @@
     "release": "npx git-ensure -a && npx bumpp --commit --tag --push && npm publish"
   },
   "devDependencies": {
-
-  },
-  "dependencies": {
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
     "vite": "6.x"
