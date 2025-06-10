@@ -7,7 +7,7 @@
     "build": "tsc",
     "dev": "npm run build",
     "release": "npx git-ensure -a && npx bumpp --commit --tag --push && npm publish",
-    "test": " npx playwright test --config=playwright.config.ts",
+    "test": "npm run test:vite && npx playwright test --config=playwright.config.ts",
     "test:vite": "cd tests && npx vite"
   },
   "module": "dist/index.js",
