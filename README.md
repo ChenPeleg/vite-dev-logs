@@ -77,7 +77,6 @@ import { logDevelopment } from './development/log-development';
 import React from 'react';
 
 class ErrorBoundary extends React.Component {
- 
    
     componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
         logDevelopment({
@@ -89,7 +88,27 @@ class ErrorBoundary extends React.Component {
         });
     }
  
-   ... // other methods and state
+  // ...other methods and state
 }
+```
 
-## 
+## Options
+
+You can customize the plugin's behavior by passing options to it:
+
+
+```typescript
+import { defineConfig } from 'vite';
+import viteDevLogs from 'vite-dev-logs';
+export default defineConfig({
+  plugins: [viteDevLogs(
+    {
+        url: '/custom-logger', // Custom URL path for logs. defaults to `/dev-logger`.
+        outputFolder: 'my-logs', // Custom folder for logs.  defaults to 'logs'.
+        outputFileName: 'my-dev-log', // Custom file name for logs. defaults to 'dev-log'.
+    }
+  )],
+});
+```
+
+ 
