@@ -56,4 +56,40 @@ const logDevelopment = (log : Record<string, any>) =>
     });
 ```
 
+## Example usage
+
+Inside your application, you can use the `logDevelopment` function to send logs to the development server:
+
+```typescript
+import { logDevelopment } from './development/log-development';
+
+logDevelopment({
+    message: 'This is a development only log',
+    level: 'info',
+    timestamp: new Date().toISOString(),
+});
+```
+
+Using with React's Error boundaries:
+
+```tsx
+import { logDevelopment } from './development/log-development';
+import React from 'react';
+
+class ErrorBoundary extends React.Component {
  
+   
+    componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+        logDevelopment({
+            message: error.message,
+            stack: error.stack,
+            errorInfo,
+            level: 'error',
+            timestamp: new Date().toISOString(),
+        });
+    }
+ 
+   ... // other methods and state
+}
+
+## 
