@@ -43,6 +43,8 @@ export default defineConfig({
 
 ## Sending logs to the development server
 
+To send logs to the development server, you can create a simple function that sends logs to the default endpoint `/dev-logger`.
+
 ```typescript
 // src/development/log-development.ts
 const logDevelopment = (log : Record<string, any>) =>
