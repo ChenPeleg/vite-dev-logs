@@ -96,7 +96,6 @@ class ErrorBoundary extends React.Component {
 
 You can customize the plugin's behavior by passing options to it:
 
-
 ```typescript
 import { defineConfig } from 'vite';
 import viteDevLogs from 'vite-dev-logs';
@@ -111,4 +110,24 @@ export default defineConfig({
 });
 ```
 
- 
+## Working with AI Agents Example
+
+### Creating a simple clear logs script (to minimize noise)
+add a simple script to clear the logs before starting the AI Agent:
+
+```json 
+{
+  "scripts": {
+    "clear-logs":   "node -e \"require('fs').rmSync('logs', { recursive: true, force: true }); require('fs').mkdirSync('logs');\"",
+  }
+}
+```
+
+### Using the logs with your AI Agent
+
+After doing some work with the AI Agent, when you see a browser error, or any other unwanted behavior, you can run the AI Agent with the logs:
+
+```prompt
+Please analyze the logs in the `logs` folder and provide insights on how to fix the issues.
+```
+
