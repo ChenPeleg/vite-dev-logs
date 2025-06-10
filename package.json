@@ -1,0 +1,54 @@
+{
+  "name": "vite-dev-logs",
+  "description": "Creates a Vite plugin that logs only in development mode, for AI agents.",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "module": "./dist/index.js",
+      "import": "./dist/index.js"
+    }
+  },
+  "private": false,
+  "license": "MIT",
+  "author": "Chen Peleg <chenpeleg@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChenPeleg/vite-dev-logs"
+  },
+  "homepage": "https://github.com/ChenPeleg/vite-dev-logs#readme",
+  "bugs": "https://github.com/ChenPeleg/vite-dev-logs/issues",
+  "files": [
+    "dist",
+    "*.d.ts"
+  ],
+  "keywords": [
+    "vite",
+    "vue",
+    "development",
+    "AI",
+    "agent",
+    "logs"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "npm run build",
+    "release": "npx git-ensure -a && npx bumpp --commit --tag --push && npm publish"
+  },
+  "devDependencies": {
+
+  },
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "vite": "6.x"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
+}
