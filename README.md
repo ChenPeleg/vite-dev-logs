@@ -1,3 +1,9 @@
+[![Status badge](https://github.com/ChenPeleg/vite-dev-logs/actions/workflows/playwright.yml/badge.svg?branch=main)](https://github.com/ChenPeleg/vite-dev-logs/actions/?query=branch%3Amain)
+[![npm version](https://badge.fury.io/js/vite-dev-logs.svg)](https://badge.fury.io/js/vite-dev-logs)
+[![Licence](https://img.shields.io/github/license/ChenPeleg/vite-dev-logs.svg?style=flat&colorA=18181B&colorB=28CF8D)](https://github.com/ChenPeleg/vite-dev-logs/LICENCE)
+![NPM Downloads](https://img.shields.io/npm/d18m/vite-dev-logs)
+
+
 # Vite Development Logger Plugin
 
 A Vite plugin for creating local logs during development. Suited for AI Agents.
