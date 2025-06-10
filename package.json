@@ -33,7 +33,6 @@
   },
   "homepage": "https://github.com/ChenPeleg/vite-dev-logs#readme",
   "bugs": "https://github.com/ChenPeleg/vite-dev-logs/issues",
-
   "keywords": [
     "vite",
     "vue",
@@ -42,8 +41,8 @@
     "agent",
     "logs"
   ],
-
   "devDependencies": {
+    "@types/node": "^24.0.0",
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
@@ -52,8 +51,5 @@
   "engines": {
     "node": ">=20.0.0",
     "npm": ">=10.0.0"
-  },
-  "dependencies": {
-    "@types/node": "^24.0.0"
   }
 }
