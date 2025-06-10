@@ -47,7 +47,7 @@
     "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "vite": "6.x"
+    "vite": "^5.0.0 || ^6.0.0"
   },
   "engines": {
     "node": ">=20.0.0",
