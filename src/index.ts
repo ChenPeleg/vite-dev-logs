@@ -1,5 +1,6 @@
 import type { Plugin } from 'vite';
-import fs from 'fs';
+import {mkdirSync , appendFileSync} from 'fs';
+import {existsSync} from 'node:fs';
 
 interface ViteDevLoggerOptions {
     /**
@@ -13,7 +14,7 @@ interface ViteDevLoggerOptions {
     outputFolder?: string;
     /**
      * The name of the output file where logs will be stored.
-     * defaults to 'dev-log''.
+     * defaults to 'dev-log'.
      */
     outputFileName?: string;
 }
@@ -31,8 +32,8 @@ export default function viteDevLogger(
         ...defaultOptions,
         ...options,
     };
-    if (!fs.existsSync(pluginOptions.outputFolder as string)) {
-        fs.mkdirSync(pluginOptions.outputFolder as string);
+    if (!existsSync(pluginOptions.outputFolder as string)) {
+        mkdirSync(pluginOptions.outputFolder as string);
     }
     const todayDate = new Date().toISOString().split('T')[0];
     return {
@@ -50,7 +51,7 @@ export default function viteDevLogger(
                 req.on('end', () => {
                     try {
                         const data = JSON.parse(body);
-                        fs.appendFileSync(
+                        appendFileSync(
                             `${pluginOptions.outputFolder}/${pluginOptions.outputFileName}${todayDate}.log`,
                             JSON.stringify(data, null, 0) + '\n'
                         );
