@@ -6,7 +6,9 @@
   "scripts": {
     "build": "tsc",
     "dev": "npm run build",
-    "release": "npx git-ensure -a && npx bumpp --commit --tag --push && npm publish"
+    "release": "npx git-ensure -a && npx bumpp --commit --tag --push && npm publish",
+    "test": " npx playwright test --config=playwright.config.ts",
+    "test:vite": "cd tests && npx vite"
   },
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -42,6 +44,7 @@
     "logs"
   ],
   "devDependencies": {
+    "@playwright/test": "^1.52.0",
     "@types/node": "^24.0.0",
     "typescript": "^5.8.3"
   },
