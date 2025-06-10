@@ -3,6 +3,11 @@
   "description": "Creates a Vite plugin that logs only in development mode, for AI agents.",
   "version": "0.1.0",
   "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "npm run build",
+    "release": "npx git-ensure -a && npx bumpp --commit --tag --push && npm publish"
+  },
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -37,11 +42,7 @@
     "agent",
     "logs"
   ],
-  "scripts": {
-    "build": "tsc",
-    "dev": "npm run build",
-    "release": "npx git-ensure -a && npx bumpp --commit --tag --push && npm publish"
-  },
+
   "devDependencies": {
     "typescript": "^5.8.3"
   },
