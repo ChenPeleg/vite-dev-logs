@@ -35,7 +35,6 @@ export default function viteDevLogger(
     if (!existsSync(pluginOptions.outputFolder as string)) {
         mkdirSync(pluginOptions.outputFolder as string);
     }
-    const todayDate = new Date().toISOString().split('T')[0];
     return {
         name: 'vite-dev-logger',
         configureServer(server) {
@@ -51,6 +50,7 @@ export default function viteDevLogger(
                 req.on('end', () => {
                     try {
                         const data = JSON.parse(body);
+                        const todayDate = new Date().toISOString().split('T')[0];
                         appendFileSync(
                             `${pluginOptions.outputFolder}/${pluginOptions.outputFileName}-${todayDate}.log`,
                             JSON.stringify(data, null, 0) + '\n'
